@@ -1,0 +1,19 @@
+var braiders = new Array();
+<% @braiders.each do |braider| %>
+	braiders.push(new Array(<%= braider.id %>, '<%= braider.name %>', <%= braider.number_of_carriers %>, <%= braider.carrier_speed %>, <%= braider.capstan_diameter %>));
+<% end %>
+
+function braiderSelected() {
+	braider_id = $('braidcalc_braider_id').getvalue();
+	braiders.each(function(braider) {
+		if (braider[0] == braider_id) {
+			document.getElementById("braidcalc_number_of_carriers").value = braider[2];
+			document.getElementById("braidcalc_carrier_speed").value = braider[3];
+			document.getElementById("braidcalc_capstan_diameter").value = braider[4];
+		}
+	}
+}
+
+document.observe('dom:loaded', function() {
+	$('braidcalc_braider_id').observe('change',braiderSelected);
+});

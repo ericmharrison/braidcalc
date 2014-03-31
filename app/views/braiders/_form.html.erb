@@ -1,0 +1,33 @@
+<%= form_for(@braider) do |f| %>
+  <% if @braider.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@braider.errors.count, "error") %> prohibited this braider from being saved:</h2>
+
+      <ul>
+      <% @braider.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :number_of_carriers %><br>
+    <%= f.number_field :number_of_carriers %>
+  </div>
+  <div class="field">
+    <%= f.label :carrier_speed %><br>
+    <%= f.number_field :carrier_speed %>
+  </div>
+  <div class="field">
+    <%= f.label :carrier_diameter %><br>
+    <%= f.number_field :carrier_diameter %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,3 @@
+class JavascriptsController < ApplicationController
+
+end

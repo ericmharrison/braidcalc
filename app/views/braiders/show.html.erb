@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @braider.name %>
+</p>
+
+<p>
+  <strong>Number of carriers:</strong>
+  <%= @braider.number_of_carriers %>
+</p>
+
+<p>
+  <strong>Carrier speed:</strong>
+  <%= @braider.carrier_speed %>
+</p>
+
+<p>
+  <strong>Carrier diameter:</strong>
+  <%= @braider.carrier_diameter %>
+</p>
+
+<%= link_to 'Edit', edit_braider_path(@braider) %> |
+<%= link_to 'Back', braiders_path %>

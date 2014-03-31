@@ -1,0 +1,36 @@
+
+<h1>Wardwell Braid Calculator</h1>
+<%= form_for :braidcalc do |f| %>
+	<div id="units">
+		<p>
+			<h4>1. Units</h4>
+			<%= f.radio_button(:units, "English") %>
+			<%= f.label(:unit_English, "English") %> </br>
+			<%= f.radio_button(:units, "Metric") %>
+			<%= f.label(:units_Metric, "Metric") %>
+		</p>
+	</div>
+	
+	<div id="braider">
+		
+
+		<p>
+			<h4>2. Braider Properties</h4>			
+				
+				<%= f.collection_select :braider_id, Braider.all, :id, :name, {prompt: "Select a Braider"}, data: { braiderChange: true } %></br>
+				<%= f.label ("Number of Carriers") %> 
+				<%= f.text_field :number_of_carriers %> </br> 
+				<%= f.label ("Carrier Speed") %> 
+				<%= f.text_field :carrier_speed %> </br>
+				<%= f.label ("Capstan Diameter") %>
+				<%= f.text_field :capstan_diameter %></br>
+				
+		</p>
+	</div>
+	
+	<p>
+		<%= f.submit "Run Calculation" %>
+	</p>
+<% end %>
+
+

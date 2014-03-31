@@ -1,0 +1,41 @@
+<%= form_for(@braid_config) do |f| %>
+  <% if @braid_config.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@braid_config.errors.count, "error") %> prohibited this braid_config from being saved:</h2>
+
+      <ul>
+      <% @braid_config.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :braider_id %><br>
+    <%= f.number_field :braider_id %>
+  </div>
+  <div class="field">
+    <%= f.label :pinion_teeth %><br>
+    <%= f.number_field :pinion_teeth %>
+  </div>
+  <div class="field">
+    <%= f.label :gear_teeth %><br>
+    <%= f.number_field :gear_teeth %>
+  </div>
+  <div class="field">
+    <%= f.label :inches_per_minute %><br>
+    <%= f.text_field :inches_per_minute %>
+  </div>
+  <div class="field">
+    <%= f.label :feet_per_hour %><br>
+    <%= f.text_field :feet_per_hour %>
+  </div>
+  <div class="field">
+    <%= f.label :picks_per_inch %><br>
+    <%= f.text_field :picks_per_inch %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

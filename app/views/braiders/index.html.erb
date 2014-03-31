@@ -1,0 +1,33 @@
+<h1>Listing braiders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Number of carriers</th>
+      <th>Carrier speed</th>
+      <th>Carrier diameter</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @braiders.each do |braider| %>
+      <tr>
+        <td><%= braider.name %></td>
+        <td><%= braider.number_of_carriers %></td>
+        <td><%= braider.carrier_speed %></td>
+        <td><%= braider.carrier_diameter %></td>
+        <td><%= link_to 'Show', braider %></td>
+        <td><%= link_to 'Edit', edit_braider_path(braider) %></td>
+        <td><%= link_to 'Destroy', braider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Braider', new_braider_path %>

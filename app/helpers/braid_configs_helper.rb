@@ -1,0 +1,2 @@
+module BraidConfigsHelper
+end

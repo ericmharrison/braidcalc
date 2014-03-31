@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  braider_id: 1
+  pinion_teeth: 1
+  gear_teeth: 1
+  inches_per_minute: 1.5
+  feet_per_hour: 1.5
+  picks_per_inch: 1.5
+
+two:
+  braider_id: 1
+  pinion_teeth: 1
+  gear_teeth: 1
+  inches_per_minute: 1.5
+  feet_per_hour: 1.5
+  picks_per_inch: 1.5
